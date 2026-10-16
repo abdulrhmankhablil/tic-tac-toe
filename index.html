@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic Tac Toe</title>
+  <meta name="description" content="A clean, accessible browser Tic Tac Toe game with modular JavaScript." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container" role="main" aria-labelledby="title">
+    <h1 id="title">Tic Tac Toe</h1>
+
+    <section class="controls" aria-label="Game controls">
+      <div class="names">
+        <label>
+          <span class="label-text">Player 1 (X)</span>
+          <input id="player1-name" type="text" placeholder="Player 1" maxlength="20" />
+        </label>
+
+        <label>
+          <span class="label-text">Player 2 (O)</span>
+          <input id="player2-name" type="text" placeholder="Player 2" maxlength="20" />
+        </label>
+      </div>
+
+      <div class="buttons">
+        <button id="start-btn" class="btn primary">Start Game</button>
+        <button id="restart-btn" class="btn secondary">Restart</button>
+      </div>
+
+      <div class="scoreboard" aria-live="polite">
+        <div class="score">
+          <div class="score-title">X</div>
+          <div id="score-x" class="score-value">0</div>
+        </div>
+        <div class="score">
+          <div class="score-title">Ties</div>
+          <div id="score-ties" class="score-value">0</div>
+        </div>
+        <div class="score">
+          <div class="score-title">O</div>
+          <div id="score-o" class="score-value">0</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="board" class="board" aria-label="Tic Tac Toe board" role="grid">
+      <!-- squares rendered by script.js -->
+    </section>
+
+    <div id="status" class="status" aria-live="polite">Press "Start Game" to begin</div>
+
+    <div class="small">Tip: Use keyboard (Tab + Enter/Space) to move and place marks.</div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
